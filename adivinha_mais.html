@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+<input/> <!--coloca botão na tela-->
+
+<button> <!--escrita botão tela-->
+Compare com o meu segredo
+</button>
+
+
+<script>//java
+function sorteia(){
+    return Math.round(Math.random()*10);
+}
+function sorteiaNumeros(quantidade){
+    var segredos = [];
+    var numero=1;//quantos num eu já sortiei
+    while(numero<=quantidade){
+        var numAleatorio = sorteia();
+        
+        if(numAleatorio !== 0){
+                var achou=false;
+
+                for(var posição=0; posição<segredos.length; posição++){
+                    if(segredos[posição]==numAleatorio){
+                        achou =true;
+                        break;
+                    }
+                }
+
+                if(achou==false){
+                segredos.push(numAleatorio);//empurrar pra dentro do array
+                numero++;
+            }
+        }
+
+    }
+    return segredos;
+}
+
+var segredos = sorteiaNumeros(6); //numeros que não se repetem
+console.log(segredos);
+var input = document.querySelector("input");
+input.focus();//pega do html a tag e joga nessa variavel em java
+//input.value //valor do input
+function verifica(){
+    var achou = false;
+    for(var posição=0; posição<segredos.length; posição++){
+
+    if(input.value==segredos[posição]){
+    alert("Você acertou!!!!!");
+    achou = true;
+    break;
+    }
+}
+if(achou==false){
+    alert("Você errou >0<");
+}
+
+    input.value=""; //limpa a caixa de texto e deixa para outra tentativa
+    input.focus();//a caixa para digitar fica sempre em azul
+}
+var button = document.querySelector("button");
+button.onclick = verifica; //clicando no botão
+
+</script>

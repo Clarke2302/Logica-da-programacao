@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+function escreva(frase){
+    document.write(frase);
+    pulalinha();
+}
+var numFamilia= parseInt(prompt("Quantos integrantes tem na sua família Nerd?"));
+var n=0;
+var idadeSoma=0;
+while(numFamilia>=n){
+    var idade = parseInt(prompt("Qual a idade do familiar?"));
+    n++;
+    idadeSoma=idadeSoma+idade;
+    
+    if(n==numFamilia){
+        var media=idadeSoma/numFamilia;
+        escreva("A média dos familiares de um RPG é: "+media);
+    }
+
+}
+/*var idadePaulo = 24;
+var idadeJuni = 25;
+var idadeBabs = 25;
+var idadeJubs = 23;
+var idadeClarke = 23;
+
+var somaIdades = (idadePaulo+idadeJuni+idadeBabs+idadeJubs+idadeClarke);
+var mediaIdades = somaIdades/5;
+escreva("A média das idades nerds é: "+mediaIdades);*/
+
+</script>

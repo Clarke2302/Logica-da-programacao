@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+function pulalinha(){
+    document.write("<br><br>");
+}
+function escreva(frase){
+    document.write(frase);
+    pulalinha();
+}
+function sorteia(n){
+    return Math.round(Math.random()*n);
+
+}
+
+var numPensado = sorteia(10);
+console.log(numPensado);
+
+var comeco=1;
+var ate=3;
+
+while(comeco<=ate){
+var chute=parseInt(prompt("Qual é o seu chute?"));
+if(chute==numPensado){
+    escreva("Você acertou!!!:) , o número pensado era "+numPensado);
+    comeco=4;//ou use break;
+}else{
+    escreva("Você errou :( ");
+}
+comeco++;
+}
+</script>

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+//criando suas funçoes
+function puloLinha(){
+    document.write("<br><br>");
+}
+function alerta(){
+    alert("oi");
+
+}
+function escreva(frase){
+    document.write(frase);
+    puloLinha();
+}
+//variaveis ao invés de int use var
+var ano_pri = 2023;
+var ano_seg= 1920;
+var ano_ter= 2018;
+var idade1=(ano_pri-2000);
+var idade2=(ano_seg-1909);
+var idade3=(ano_ter-2002);
+var media = ((idade1+idade2+idade3)/3);
+
+alerta();
+escreva("Flávio tem "+idade1+" anos");//escrever algo html dentro do javascript
+escreva("Joaquim tem "+idade2+" anos");
+escreva("Belle tem "+idade3+" anos");
+escreva("A média das Idades é "+Math.round(media)); //valor que tem que arredondar numeros
+
+</script>
